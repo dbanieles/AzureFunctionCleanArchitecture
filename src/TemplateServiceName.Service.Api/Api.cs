@@ -1,22 +1,19 @@
 using Infrastructure.KeyVault;
-using Infrastructure.KeyVault.Dto;
-using Infrastructure.KeyVault.Impl;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace AzureFunctionCleanArchitetture
+namespace TemplateServiceName.Service.Api
 {
     public class Api
     {
         private readonly ILogger<Api> _logger;
 
-        private readonly IOptions<KeyVaultDto> _keyVaultSecret;
+        private readonly IOptions<KeyVaultSecret> _keyVaultSecret;
 
-        public Api(ILogger<Api> logger, IOptions<KeyVaultDto> keyVaultSecret)
+        public Api(ILogger<Api> logger, IOptions<KeyVaultSecret> keyVaultSecret)
         {
             _logger = logger;
             _keyVaultSecret = keyVaultSecret;

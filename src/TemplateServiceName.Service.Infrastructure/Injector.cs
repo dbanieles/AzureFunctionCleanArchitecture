@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Infrastructure
+namespace TemplateServiceName.Service.Infrastructure
 {
     public static class Injector
     {

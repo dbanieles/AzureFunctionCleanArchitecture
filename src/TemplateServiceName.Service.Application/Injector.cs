@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace Application
+namespace TemplateServiceName.Service.Application
 {
     public static class Injector
     {

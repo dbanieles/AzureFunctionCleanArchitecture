@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "dbanieles",
+  "classifications": ["Azure", "Azure Function", ".NET 8", "Clean Architecture"],
+  "name": "AzureFunctionCleanArchitecture",
+  "description": "A Clean Architecture Solution Template for creating Azure Function with ASP.NET Core.",
+  "identity": "Azure.Function.Clean.Architecture",
+  "groupIdentity": "Azure.Function.Clean.Architecture",
+  "shortName": "azfca-sln",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "TemplateServiceName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "fullName": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "prepend",
+      "replaces": "TemplateServiceName"
+    },
+    "UnitTest": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "forms": { 
+    "prepend": {
+      "identifier": "replace",
+      "pattern": "(?<=^)",
+      "replacement": ""
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**/*",
+        "templates/**/*",
+        "*.nuspec"
+      ],
+      "modifiers": [
+        {
+          "condition": "!(UnitTest)",
+          "exclude": [ "TemplateServiceName.Service.UnitTest/**/*"]
+        }
+      ]
+    }
+  ]
+}
+  

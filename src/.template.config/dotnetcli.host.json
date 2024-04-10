@@ -1,0 +1,10 @@
+{
+  "symbolInfo": {
+    "UnitTest": {
+      "longName": "unit-test"
+    },
+    "RuleAnalytics": {
+      "longName": "rule-analytics"
+    }
+  }
+}
